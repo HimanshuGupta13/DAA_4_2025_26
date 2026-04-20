@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="header">
+      <div>
+        <h1>Sudoku</h1>
+        <p class="meta">Fill the grid with digits 1–9</p>
+      </div>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="val" id="timer">00:00</div>
+          <div class="lbl">Time</div>
+        </div>
+        <div class="stat">
+          <div class="val" id="mistakes">0</div>
+          <div class="lbl">Mistakes</div>
+        </div>
+        <div class="stat">
+          <div class="val" id="score">0</div>
+          <div class="lbl">Score</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game">
+      <!-- Board -->
+      <div class="board-wrap">
+        <div id="board"></div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+        <p class="section-label">Difficulty</p>
+        <div class="diff-row">
+          <button class="diff-btn active" data-d="easy">Easy</button>
+          <button class="diff-btn" data-d="medium">Medium</button>
+          <button class="diff-btn" data-d="hard">Hard</button>
+          <button class="diff-btn" data-d="expert">Expert</button>
+        </div>
+
+        <p class="section-label">Input Mode</p>
+        <div class="mode-row">
+          <button class="mode-btn active" id="btn-normal">✏️ Normal</button>
+          <button class="mode-btn" id="btn-notes">📝 Notes</button>
+        </div>
+
+        <p class="section-label">Numbers</p>
+        <div class="numpad" id="numpad"></div>
+
+        <p class="section-label">Actions</p>
+        <div class="actions">
+          <button class="act-btn" id="btn-undo">↩ Undo</button>
+          <button class="act-btn" id="btn-hint">💡 Hint (<span id="hint-count">3</span>)</button>
+          <button class="act-btn danger" id="btn-solve">⚡ Solve</button>
+          <button class="act-btn primary" id="btn-new">🎲 New Game</button>
+        </div>
+
+        <div class="msg" id="msg"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
